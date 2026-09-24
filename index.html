@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en">
+</style>
+
+<!-- PRICING CSS -->
+<style>
+
+  .pricing-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 22px !important;
+    margin-top: 42px !important;
+  }
+
+  .price-card {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-md) !important;
+    padding: 32px 26px !important;
+    box-sizing: border-box !important;
+    transition: .25s ease !important;
+  }
+
+  .price-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent) !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+  }
+
+  .price-card.featured {
+    border-color: var(--accent) !important;
+    transform: translateY(-5px);
+  }
+
+  .price-card.featured:hover {
+    transform: translateY(-10px);
+  }
+
+  .price-label {
+    color: var(--accent-2);
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    margin-bottom: 10px;
+  }
+
+  .price-card h3 {
+    font-size: 1.25rem;
+    margin: 0 0 14px;
+  }
+
+  .price {
+    color: var(--text);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .price span {
+    color: var(--accent);
+    font-size: 1rem;
+  }
+
+  .custom-price {
+    font-size: 1.65rem;
+    color: var(--accent);
+  }
+
+  .price-description {
+    color: var(--muted);
+    font-size: .88rem;
+    line-height: 1.65;
+    margin-bottom: 22px;
+  }
+
+  .price-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+  }
+
+  .price-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: .86rem;
+    margin-bottom: 13px;
+  }
+
+  .price-features li i {
+    color: var(--accent);
+    font-size: .75rem;
+  }
+
+  .price-card .btn {
+    margin-top: auto;
+    text-align: center;
+  }
+
+  .popular-badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: var(--accent);
+    color: #191307;
+    padding: 6px 11px;
+    border-radius: 999px;
+    font-size: .68rem;
+    font-weight: 800;
+  }
+
+  @media (max-width: 900px) {
+    .pricing-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .pricing-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+</style>
+
+</head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Piyush Shukla - Freelance Web Designer, Web Developer and Graphic Designer.">
+<meta name="keywords" content="Piyush Shukla, Freelancer, Web Designer, Web Developer, Graphic Designer, Canva Designer">
+<meta name="author" content="Piyush Shukla">
+<title>Piyush Shukla | Freelancer &amp; Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root{
+  --bg:#14171c;
+  --surface:#1b1f27;
+  --surface-2:#232833;
+  --border:#2c3240;
+  --text:#edeff2;
+  --muted:#9aa1ac;
+  --accent:#e8a33d;
+  --accent-2:#5fa8d3;
+  --radius-sm:8px;
+  --radius-md:14px;
+  --maxw:1120px;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:-0.01em}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.section{padding:96px 0}
+@media (max-width:720px){.section{padding:64px 0}}
+
+/* ---------- NAVBAR ---------- */
+.navbar{
+  position:sticky;top:0;z-index:100;
+  background:rgba(20,23,28,0.85);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+  padding-top:env(safe-area-inset-top,0px);
+}
+.nav-container{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600}
+.logo span{color:var(--accent)}
+.nav-menu{display:flex;align-items:center;gap:28px}
+.nav-link{color:var(--muted);font-size:0.95rem;padding:6px 2px;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.nav-link:hover,.nav-link.active{color:var(--text);border-color:var(--accent)}
+.nav-hire{
+  background:var(--accent);color:#191307;padding:10px 20px;border-radius:999px;font-weight:600;font-size:0.9rem;
+  transition:transform .2s,opacity .2s;
+}
+.nav-hire:hover{transform:translateY(-1px);opacity:0.92}
+.menu-btn{display:none;font-size:1.3rem;color:var(--text)}
+
+@media (max-width:900px){
+  .menu-btn{display:block}
+  .nav-menu{
+    position:fixed;top:72px;left:0;right:0;
+    flex-direction:column;align-items:stretch;gap:0;
+    background:var(--surface);border-bottom:1px solid var(--border);
+    padding:8px 24px 20px;
+    transform:translateY(-8px);opacity:0;pointer-events:none;
+    transition:transform .2s ease,opacity .2s ease;
+  }
+  .nav-menu.open{transform:translateY(0);opacity:1;pointer-events:auto}
+  .nav-link{padding:12px 0;border-bottom:1px solid var(--border)}
+  .nav-hire{margin-top:14px;text-align:center}
+}
+
+/* ---------- HERO ---------- */
+.hero{padding:88px 0 96px}
+.hero-container{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center}
+@media (max-width:900px){.hero-container{grid-template-columns:1fr;gap:48px}}
+
+.availability{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid var(--border);padding:6px 14px;border-radius:999px;
+  font-size:0.82rem;color:var(--muted);margin-bottom:22px;
+}
+.availability span{width:8px;height:8px;border-radius:50%;background:#5fd38c;box-shadow:0 0 0 3px rgba(95,211,140,0.18)}
+.hero-small{color:var(--accent-2);font-size:1rem;margin-bottom:6px}
+.hero h1{font-size:clamp(2.4rem,5vw,3.6rem);margin-bottom:10px}
+.hero h1 span{color:var(--accent)}
+.hero h2{font-size:clamp(1.3rem,2.6vw,1.8rem);color:var(--text);font-weight:500;margin-bottom:20px}
+.hero h2 span{display:block;color:var(--muted);font-family:'Inter',sans-serif;font-weight:500;font-size:0.65em;margin-top:4px}
+.hero-description{color:var(--muted);max-width:46ch;margin-bottom:34px}
+.hero-buttons{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 26px;border-radius:999px;font-weight:600;font-size:0.95rem;transition:transform .2s,opacity .2s,background .2s}
+.primary-btn{background:var(--accent);color:#191307}
+.primary-btn:hover{transform:translateY(-1px);opacity:0.92}
+.secondary-btn{border:1px solid var(--border);color:var(--text)}
+.secondary-btn:hover{border-color:var(--accent-2);color:var(--accent-2)}
+.hero-skills{display:flex;gap:10px;flex-wrap:wrap}
+.hero-skills span{font-size:0.8rem;color:var(--muted);border:1px solid var(--border);padding:6px 12px;border-radius:999px}
+
+.hero-visual{position:relative;display:flex;justify-content:center}
+.profile-glow{
+  position:absolute;width:280px;height:280px;border-radius:50%;
+  background:radial-gradient(circle,rgba(232,163,61,0.25),transparent 70%);
+  filter:blur(10px);
+}
+.profile-card{
+  position:relative;width:100%;max-width:340px;background:var(--surface);
+  border:1px solid var(--border);border-radius:var(--radius-md);padding:28px;text-align:center;
+}
+.profile-image{width:120px;height:120px;border-radius:50%;margin:0 auto 18px;overflow:hidden;border:2px solid var(--accent)}
+.profile-image .avatar-fallback{
+  width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  color:#14171c;font-family:'Fraunces',serif;font-size:2.2rem;font-weight:600;
+}
+.profile-info h3{font-size:1.2rem;margin-bottom:4px}
+.profile-info p{color:var(--muted);font-size:0.9rem;margin-bottom:16px}
+.profile-social{display:flex;justify-content:center;gap:14px}
+.profile-social a{
+  width:36px;height:36px;border-radius:50%;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;transition:border-color .2s,color .2s;color:var(--muted);
+}
+.profile-social a:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ---------- SECTION HEADING ---------- */
+.section-heading{margin-bottom:48px;max-width:640px}
+.section-heading.center{margin-left:auto;margin-right:auto;text-align:center}
+.section-tag{color:var(--accent);font-size:0.85rem;font-weight:600;margin-bottom:10px}
+.section-heading h2{font-size:clamp(1.8rem,3.4vw,2.4rem);margin-bottom:12px}
+.section-heading h2 span{color:var(--accent-2)}
+.section-heading > p:last-child{color:var(--muted)}
+
+/* ---------- ABOUT ---------- */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+@media (max-width:800px){.about-grid{grid-template-columns:1fr}}
+.about-text p{color:var(--muted);margin-bottom:16px;max-width:56ch}
+.text-link{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-weight:600;margin-top:8px}
+.text-link:hover{color:var(--accent-2)}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:24px}
+.stat-card i{color:var(--accent);font-size:1.3rem;margin-bottom:12px}
+.stat-card h3{font-size:1.8rem;margin-bottom:4px}
+.stat-card p{color:var(--muted);font-size:0.88rem}
+
+/* ---------- SERVICES ---------- */
+.services{background:var(--surface)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media (max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.services-grid{grid-template-columns:1fr}}
+.service-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-md);padding:28px;transition:border-color .2s}
+.service-card:hover{border-color:var(--accent)}
+.service-icon{width:46px;height:46px;border-radius:var(--radius-sm);background:var(--surface-2);display:flex;align-items:center;justify-content:center;color:var(--accent);margin-bottom:18px;font-size:1.1rem}
+.service-card h3{font-size:1.1rem;margin-bottom:8px}
+.service-card p{color:var(--muted);font-size:0.92rem;margin-bottom:18px}
+.service-btn{display:inline-flex;align-items:center;gap:8px;color:var(--accent-2);font-weight:600;font-size:0.9rem}
+
+/* ---------- SKILLS ---------- */
+.skills-wrapper{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media (max-width:800px){.skills-wrapper{grid-template-columns:1fr}}
+.skill-category{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:26px}
+.skill-title{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.skill-title i{color:var(--accent)}
+.skill-title h3{font-size:1.05rem}
+.skill-list{display:flex;flex-wrap:wrap;gap:8px}
+.skill-list span{font-size:0.82rem;color:var(--muted);border:1px solid var(--border);padding:6px 12px;border-radius:999px}
+
+/* ---------- PORTFOLIO ---------- */
+.portfolio-filters{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:40px}
+.filter-btn{padding:9px 18px;border-radius:999px;border:1px solid var(--border);color:var(--muted);font-size:0.88rem;transition:all .2s}
+.filter-btn:hover{color:var(--text)}
+.filter-btn.active{background:var(--accent);border-color:var(--accent);color:#191307;font-weight:600}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media (max-width:900px){.portfolio-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.portfolio-grid{grid-template-columns:1fr}}
+.project-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden;transition:transform .2s,border-color .2s}
+.project-card:hover{transform:translateY(-3px);border-color:var(--accent)}
+.project-card.hidden{display:none}
+.project-image{position:relative;aspect-ratio:4/3;overflow:hidden}
+.project-image .thumb-fallback{
+  width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+  font-size:2rem;color:rgba(255,255,255,0.85);
+}
+.project-image .thumb-fallback i{opacity:0.9}
+.project-overlay{
+  position:absolute;inset:0;background:rgba(20,23,28,0.72);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:opacity .2s;
+}
+.project-card:hover .project-overlay{opacity:1}
+.view-project{
+  display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#191307;
+  padding:10px 18px;border-radius:999px;font-weight:600;font-size:0.88rem;
+}
+.project-info{padding:18px 20px}
+.project-info span{font-size:0.74rem;letter-spacing:0.03em;color:var(--accent-2);font-weight:600}
+.project-info h3{font-size:1.05rem;margin:6px 0 4px}
+.project-info p{color:var(--muted);font-size:0.88rem}
+
+/* thumbnail gradient variants */
+.thumb-1{background:linear-gradient(135deg,#3a4a6b,#243044)}
+.thumb-2{background:linear-gradient(135deg,#6b4a3a,#442c24)}
+.thumb-3{background:linear-gradient(135deg,#4a6b56,#243b30)}
+.thumb-4{background:linear-gradient(135deg,#6b3a5c,#3b2440)}
+.thumb-5{background:linear-gradient(135deg,#6b5a3a,#403124)}
+.thumb-6{background:linear-gradient(135deg,#3a5f6b,#243a40)}
+
+/* ---------- PROCESS ---------- */
+.process-list{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media (max-width:900px){.process-list{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.process-list{grid-template-columns:1fr}}
+.process-step{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:26px;position:relative}
+.process-step .step-num{color:var(--accent);font-family:'Fraunces',serif;font-size:1.6rem;margin-bottom:14px}
+.process-step h3{font-size:1.05rem;margin-bottom:8px}
+.process-step p{color:var(--muted);font-size:0.9rem}
+
+/* ---------- CONTACT ---------- */
+.contact{background:var(--surface)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+@media (max-width:800px){.contact-grid{grid-template-columns:1fr}}
+.contact-info p{color:var(--muted);margin-bottom:24px;max-width:44ch}
+.contact-detail{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.contact-detail i{width:40px;height:40px;border-radius:50%;background:var(--surface-2);display:flex;align-items:center;justify-content:center;color:var(--accent)}
+.contact-detail span{color:var(--muted);font-size:0.92rem}
+.contact-form{display:flex;flex-direction:column;gap:14px}
+.contact-form input,.contact-form textarea{
+  background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);
+  padding:13px 16px;color:var(--text);font:inherit;
+}
+.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--accent)}
+.contact-form textarea{resize:vertical;min-height:110px}
+.contact-form button{align-self:flex-start}
+.form-note{font-size:0.8rem;color:var(--muted);margin-top:4px}
+
+/* ---------- FOOTER ---------- */
+footer{border-top:1px solid var(--border);padding:32px 0}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-inner p{color:var(--muted);font-size:0.85rem}
+.footer-social{display:flex;gap:14px}
+.footer-social a{color:var(--muted);transition:color .2s}
+.footer-social a:hover{color:var(--accent)}
+
+/* ---------- MODAL ---------- */
+.modal-backdrop{
+  position:fixed;inset:0;background:rgba(10,11,14,0.7);z-index:200;
+  display:flex;align-items:center;justify-content:center;padding:24px;
+  opacity:0;pointer-events:none;transition:opacity .2s;
+}
+.modal-backdrop.open{opacity:1;pointer-events:auto}
+.modal{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);
+  max-width:460px;width:100%;padding:28px;position:relative;
+}
+.modal-close{position:absolute;top:16px;right:16px;font-size:1.1rem;color:var(--muted)}
+.modal-close:hover{color:var(--text)}
+.modal span.modal-cat{color:var(--accent-2);font-size:0.78rem;font-weight:600}
+.modal h3{font-size:1.3rem;margin:8px 0 12px}
+.modal p{color:var(--muted);font-size:0.92rem}
+
+/* ---------- TOAST ---------- */
+.toast{
+  position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);
+  background:var(--accent);color:#191307;padding:12px 22px;border-radius:999px;
+  font-weight:600;font-size:0.9rem;z-index:300;opacity:0;pointer-events:none;
+  transition:opacity .25s,transform .25s;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ---------- REVEAL ---------- */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+
+:focus-visible{outline:2px solid var(--accent-2);outline-offset:2px}
+</style>
+
+<!-- WHY ME - FINAL FIX -->
+<style>
+
+  .why-me .why-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 22px !important;
+    margin-top: 42px !important;
+  }
+
+  .why-me .why-card {
+    display: block !important;
+    width: auto !important;
+    box-sizing: border-box !important;
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-md) !important;
+    padding: 28px 24px !important;
+  }
+
+  .why-me .why-icon {
+    width: 50px !important;
+    height: 50px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 12px !important;
+    background: rgba(232,163,61,.10) !important;
+    color: var(--accent) !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 18px !important;
+  }
+
+  .why-me .why-card h3 {
+    margin: 0 0 10px !important;
+    font-size: 1.05rem !important;
+  }
+
+  .why-me .why-card p {
+    margin: 0 !important;
+    color: var(--muted) !important;
+    font-size: .88rem !important;
+    line-height: 1.7 !important;
+  }
+
+  @media (max-width: 900px) {
+    .why-me .why-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .why-me .why-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+
+  <div class="container nav-container">
+
+    <a href="#home" class="logo">
+      Piyush<span>.</span>
+    </a>
+
+    <nav class="nav-menu" id="navMenu">
+
+      <a href="#home" class="nav-link active">Home</a>
+
+      <a href="#about" class="nav-link">About</a>
+
+      <a href="#services" class="nav-link">Services</a>
+
+      <a href="#skills" class="nav-link">Skills</a>
+
+      <a href="#portfolio" class="nav-link">Portfolio</a>
+
+      <a href="#pricing" class="nav-link">Pricing</a>
+
+      <a href="#process" class="nav-link">Process</a>
+
+      <a href="#contact" class="nav-link">Contact</a>
+
+      <a href="#contact" class="nav-hire">
+        Hire Me
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+    </nav>
+
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      type="button"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+  </div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="container hero-container">
+    <div class="hero-content reveal">
+      <div class="availability"><span></span>Available for Freelance Projects</div>
+      <p class="hero-small">Hello, I'm</p>
+      <h1>Piyush <span>Shukla</span></h1>
+      <h2>I Design &amp; Build Websites That Make Businesses Stand Out.</h2>
+      <p class="hero-description">
+    I help businesses, creators and professionals build modern,
+    responsive websites and digital designs that look professional
+    and make a strong first impression.
+</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn primary-btn">Hire Me <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#portfolio" class="btn secondary-btn">View My Work</a>
+      </div>
+      <div class="hero-skills">
+        <span>Web Design</span>
+        <span>Development</span>
+        <span>Graphic Design</span>
+        <span>AI Content</span>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="profile-glow"></div>
+      <div class="profile-card">
+        <div class="profile-image">
+  <img src="images/profile.jpeg" alt="Piyush Shukla">
+</div>
+        <div class="profile-info">
+          <h3>Piyush Shukla</h3>
+          <p>Freelancer &amp; Digital Creator</p>
+          <div class="profile-social">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="section-heading reveal">
+      <p class="section-tag">ABOUT ME</p>
+      <h2>Building <span>Digital Solutions</span> That Make an Impact.</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+    I'm Piyush Shukla, a freelance web designer and developer who
+    creates modern, responsive websites and professional digital
+    designs for businesses, creators and professionals.
+</p>
+        <p>
+    I combine design, development and AI-assisted workflows to turn
+    ideas into clean, practical and user-friendly digital solutions.
+</p>
+        <a href="#contact" class="text-link">Let's work together <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="stats-grid reveal">
+    <div class="stat-card">
+        <i class="fa-solid fa-code"></i>
+        <h3>Web</h3>
+        <p>Design &amp; Development</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <h3>Responsive</h3>
+        <p>Mobile-Friendly Websites</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-pen-nib"></i>
+        <h3>Creative</h3>
+        <p>Graphic &amp; Social Designs</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <h3>AI-Assisted</h3>
+        <p>Modern Workflows</p>
+    </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="section-heading center reveal">
+      <p class="section-tag">WHAT I DO</p>
+      <h2>Services I <span>Provide.</span></h2>
+      <p>Practical digital services to help businesses, creators and professionals build a stronger online presence.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-display"></i></div>
+       <h3>Web Design</h3>
+       <p>Modern, responsive and user-friendly websites designed to give your business a professional online presence.</p>
+        <button class="service-btn" data-service="Web Design">Get Started <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+        <h3>Web Development</h3>
+<p>Fast, responsive and functional websites built with clean and modern web technologies.</p>
+        <button class="service-btn" data-service="Web Development">Get Started <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div>
+        <h3>Graphic Design</h3>
+<p>Professional posters, promotional creatives and visual designs for businesses and brands.</p>
+        <button class="service-btn" data-service="Graphic Design">Get Started <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fa-brands fa-instagram"></i></div>
+        <h3>Social Media Design</h3>
+<p>Engaging social media posts, promotional creatives and branded content designed for your audience.</p>
+        <button class="service-btn" data-service="Social Media Design">Get Started <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fa-brands fa-youtube"></i></div>
+        <h3>YouTube Thumbnails</h3>
+<p>Attention-grabbing thumbnails designed to make your videos stand out and look professional.</p>
+        <button class="service-btn" data-service="YouTube Thumbnail Design">Get Started <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <h3>AI Content Creation</h3>
+<p>AI-assisted content, ideas and digital creatives to help you create faster and more efficiently.</p>
+        <button class="service-btn" data-service="AI Content Creation">Get Started <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+
+
+<!-- ================= WHY WORK WITH ME ================= -->
+
+<section class="section why-me" id="why-me">
+
+  <div class="container">
+
+    <div class="section-heading center reveal">
+      <p class="section-tag">WHY ME</p>
+
+      <h2>Why Work <span>With Me?</span></h2>
+
+      <p>
+        I focus on creating clean, modern and practical digital
+        experiences that help businesses build a strong online presence.
+      </p>
+    </div>
+
+    <div class="why-grid">
+
+      <!-- CARD 1 -->
+      <div class="why-card reveal">
+        <div class="why-icon">
+          <i class="fa-solid fa-palette"></i>
+        </div>
+
+        <h3>Creative Design</h3>
+
+        <p>
+          Modern and visually appealing designs created according
+          to your brand and audience.
+        </p>
+      </div>
+
+
+      <!-- CARD 2 -->
+      <div class="why-card reveal">
+        <div class="why-icon">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+        </div>
+
+        <h3>Mobile Friendly</h3>
+
+        <p>
+          Websites and designs that work smoothly across
+          mobile, tablet and desktop.
+        </p>
+      </div>
+
+
+      <!-- CARD 3 -->
+      <div class="why-card reveal">
+        <div class="why-icon">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+
+        <h3>Fast & Practical</h3>
+
+        <p>
+          Simple and effective solutions without unnecessary
+          complexity.
+        </p>
+      </div>
+
+
+      <!-- CARD 4 -->
+      <div class="why-card reveal">
+        <div class="why-icon">
+          <i class="fa-solid fa-comments"></i>
+        </div>
+
+        <h3>Clear Communication</h3>
+
+        <p>
+          Easy communication, regular updates and a clear
+          understanding of your requirements.
+        </p>
+      </div>
+
+
+      <!-- CARD 5 -->
+      <div class="why-card reveal">
+        <div class="why-icon">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </div>
+
+        <h3>AI Powered Workflow</h3>
+
+        <p>
+          Smart use of modern AI tools to improve creativity,
+          productivity and turnaround time.
+        </p>
+      </div>
+
+
+      <!-- CARD 6 -->
+      <div class="why-card reveal">
+        <div class="why-icon">
+          <i class="fa-solid fa-handshake"></i>
+        </div>
+
+        <h3>Client Focused</h3>
+
+        <p>
+          Every project is built around your goals,
+          requirements and desired outcome.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+<section class="section skills" id="skills">
+  <div class="container">
+    <div class="section-heading reveal">
+      <p class="section-tag">MY TOOLKIT</p>
+     <h2>Skills &amp; <span>Expertise</span></h2>
+    </div>
+
+   <div class="skills-wrapper">
+
+  <div class="skill-category reveal">
+    <div class="skill-title">
+      <i class="fa-solid fa-palette"></i>
+      <h3>Design</h3>
+    </div>
+
+    <div class="skill-list">
+      <span>Canva</span>
+      <span>Figma</span>
+      <span>Graphic Design</span>
+      <span>UI Design</span>
+      <span>Social Media Design</span>
+    </div>
+  </div>
+
+  <div class="skill-category reveal">
+    <div class="skill-title">
+      <i class="fa-solid fa-code"></i>
+      <h3>Development</h3>
+    </div>
+
+    <div class="skill-list">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Python</span>
+      <span>Responsive Design</span>
+    </div>
+  </div>
+
+  <div class="skill-category reveal">
+    <div class="skill-title">
+      <i class="fa-solid fa-robot"></i>
+      <h3>AI &amp; Productivity</h3>
+    </div>
+
+    <div class="skill-list">
+      <span>ChatGPT</span>
+      <span>Gemini</span>
+      <span>AI Content</span>
+      <span>AI-Assisted Workflows</span>
+    </div>
+  </div>
+
+</div>
+  </div>
+</section>
+
+<!-- ===================== PORTFOLIO ===================== -->
+<section class="section portfolio" id="portfolio">
+  <div class="container">
+
+    <div class="section-heading center reveal">
+      <p class="section-tag">MY WORK</p>
+      <h2>Selected <span>Projects</span></h2>
+      <p>A selection of my design and development work.</p>
+    </div>
+
+    <div class="portfolio-filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+      <button class="filter-btn" data-filter="social">Social Media</button>
+      <button class="filter-btn" data-filter="thumbnail">Thumbnails</button>
+    </div>
+
+    <div class="portfolio-grid" id="portfolioGrid">
+
+      <!-- Business Website -->
+      <div class="project-card reveal" data-category="web">
+        <div class="project-image">
+          <img
+            src="images/business-website.jpg"
+            alt="Business Website Project"
+          >
+
+          <div class="project-overlay">
+            <button
+              class="view-project"
+              data-title="Business Website"
+              data-category="Web Design"
+              data-description="A modern responsive business website designed with a clean professional interface, clear sections and a strong visual presentation."
+            >
+              View Project
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="project-info">
+          <span>WEB DESIGN</span>
+          <h3>Business Website</h3>
+          <p>Modern responsive website for a professional business presence.</p>
+        </div>
+      </div>
+
+
+      <!-- Restaurant Website -->
+      <div class="project-card reveal" data-category="web">
+        <div class="project-image">
+          <img
+            src="images/restaurant-website.jpg"
+            alt="Restaurant Website Project"
+          >
+
+          <div class="project-overlay">
+            <button
+              class="view-project"
+              data-title="Restaurant Website"
+              data-category="Web Development"
+              data-description="A visually attractive restaurant website focused on menu presentation, responsive design and customer enquiries."
+            >
+              View Project
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="project-info">
+          <span>WEB DEVELOPMENT</span>
+          <h3>Restaurant Website</h3>
+          <p>Responsive restaurant website concept with modern presentation.</p>
+        </div>
+      </div>
+
+
+      <!-- Business Poster -->
+      <div class="project-card reveal" data-category="design">
+        <div class="project-image">
+          <img
+            src="images/business-poster.jpg"
+            alt="Business Poster Project"
+          >
+
+          <div class="project-overlay">
+            <button
+              class="view-project"
+              data-title="Business Poster"
+              data-category="Graphic Design"
+              data-description="Professional promotional poster created for a business campaign with a clean layout and strong visual hierarchy."
+            >
+              View Project
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="project-info">
+          <span>GRAPHIC DESIGN</span>
+          <h3>Business Poster</h3>
+          <p>Professional promotional creative for business marketing.</p>
+        </div>
+      </div>
+
+
+      <!-- Social Media Campaign -->
+      <div class="project-card reveal" data-category="social">
+        <div class="project-image">
+          <img
+            src="images/social-media.jpg"
+            alt="Social Media Campaign Project"
+          >
+
+          <div class="project-overlay">
+            <button
+              class="view-project"
+              data-title="Social Media Campaign"
+              data-category="Social Media"
+              data-description="A social media creative campaign designed for Instagram marketing, promotions and brand communication."
+            >
+              View Project
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="project-info">
+          <span>SOCIAL MEDIA</span>
+          <h3>Social Media Campaign</h3>
+          <p>Instagram promotional designs for digital marketing.</p>
+        </div>
+      </div>
+
+
+      <!-- YouTube Thumbnail -->
+      <div class="project-card reveal" data-category="thumbnail">
+        <div class="project-image">
+          <img
+            src="images/youtube-thumbnail.jpg"
+            alt="YouTube Thumbnail Project"
+          >
+
+          <div class="project-overlay">
+            <button
+              class="view-project"
+              data-title="YouTube Thumbnail"
+              data-category="Thumbnail Design"
+              data-description="High-impact YouTube thumbnail concept designed to create strong visual attention and improve content presentation."
+            >
+              View Project
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="project-info">
+          <span>THUMBNAIL</span>
+          <h3>YouTube Thumbnail</h3>
+          <p>Creator-focused thumbnail design for video content.</p>
+        </div>
+      </div>
+
+
+      <!-- Real Estate Design -->
+      <div class="project-card reveal" data-category="design">
+        <div class="project-image">
+          <img
+            src="images/real-estate-design.jpg"
+            alt="Real Estate Design Project"
+          >
+
+          <div class="project-overlay">
+            <button
+              class="view-project"
+              data-title="Real Estate Design"
+              data-category="Graphic Design"
+              data-description="Branded real estate marketing creative designed for property listings, promotions and digital advertising."
+            >
+              View Project
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="project-info">
+          <span>GRAPHIC DESIGN</span>
+          <h3>Real Estate Design</h3>
+          <p>Property marketing creative for real estate promotion.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+
+<section class="section pricing" id="pricing">
+
+  <div class="container">
+
+    <div class="section-heading center reveal">
+      <p class="section-tag">PRICING</p>
+
+      <h2>Simple <span>Pricing</span></h2>
+
+      <p>
+        Flexible packages designed for different project needs and budgets.
+      </p>
+    </div>
+
+    <div class="pricing-grid">
+
+      <!-- STARTER -->
+      <div class="price-card reveal">
+
+        <span class="price-label">STARTER</span>
+
+        <h3>Landing Page</h3>
+
+        <div class="price">
+          ₹2,999<span>+</span>
+        </div>
+
+        <p class="price-description">
+          A clean and professional one-page website for creators,
+          personal brands and small businesses.
+        </p>
+
+        <ul class="price-features">
+          <li>
+            <i class="fa-solid fa-check"></i>
+            1 Page Website
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Responsive Design
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Modern UI Design
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Basic SEO Setup
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Contact Section
+          </li>
+        </ul>
+
+        <a href="#contact" class="btn secondary-btn">
+          Get Started
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+      </div>
+
+
+      <!-- POPULAR -->
+      <div class="price-card featured reveal">
+
+        <div class="popular-badge">
+          POPULAR
+        </div>
+
+        <span class="price-label">BUSINESS</span>
+
+        <h3>Business Website</h3>
+
+        <div class="price">
+          ₹5,999<span>+</span>
+        </div>
+
+        <p class="price-description">
+          A professional multi-page website designed to help
+          businesses build credibility and attract customers.
+        </p>
+
+        <ul class="price-features">
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Up to 5 Pages
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Responsive Design
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Premium UI Design
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Contact Form
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Basic SEO Setup
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Social Media Links
+          </li>
+        </ul>
+
+        <a href="#contact" class="btn primary-btn">
+          Get Started
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+      </div>
+
+
+      <!-- CUSTOM -->
+      <div class="price-card reveal">
+
+        <span class="price-label">CUSTOM</span>
+
+        <h3>Custom Project</h3>
+
+        <div class="price custom-price">
+          Let's Talk
+        </div>
+
+        <p class="price-description">
+          Custom solutions for unique websites, branding,
+          graphics and advanced project requirements.
+        </p>
+
+        <ul class="price-features">
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Custom Requirements
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Custom UI/UX
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Advanced Features
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Website Development
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Design Support
+          </li>
+        </ul>
+
+        <a href="#contact" class="btn secondary-btn">
+          Contact Me
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="section process" id="process">
+
+  <div class="container">
+
+    <div class="section-heading center reveal">
+      <p class="section-tag">HOW I WORK</p>
+
+      <h2>My <span>Process</span></h2>
+
+      <p>
+        A simple and transparent process to turn your idea into a finished project.
+      </p>
+    </div>
+
+    <div class="process-list">
+
+      <!-- STEP 01 -->
+      <div class="process-step reveal">
+
+        <div class="step-num">01</div>
+
+        <div class="step-icon">
+          <i class="fa-solid fa-comments"></i>
+        </div>
+
+        <h3>Discuss</h3>
+
+        <p>
+          We discuss your goals, requirements, target audience and
+          project expectations.
+        </p>
+
+      </div>
+
+
+      <!-- STEP 02 -->
+      <div class="process-step reveal">
+
+        <div class="step-num">02</div>
+
+        <div class="step-icon">
+          <i class="fa-solid fa-lightbulb"></i>
+        </div>
+
+        <h3>Plan</h3>
+
+        <p>
+          I plan the structure, features, content and visual direction
+          according to your requirements.
+        </p>
+
+      </div>
+
+
+      <!-- STEP 03 -->
+      <div class="process-step reveal">
+
+        <div class="step-num">03</div>
+
+        <div class="step-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+
+        <h3>Build</h3>
+
+        <p>
+          I design and develop the project with a focus on quality,
+          responsiveness and user experience.
+        </p>
+
+      </div>
+
+
+      <!-- STEP 04 -->
+      <div class="process-step reveal">
+
+        <div class="step-num">04</div>
+
+        <div class="step-icon">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <h3>Deliver</h3>
+
+        <p>
+          After testing and final revisions, the completed project
+          is delivered ready to use.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="section-heading center reveal">
+      <p class="section-tag">GET IN TOUCH</p>
+      <h2>Let's Start a <span>Project</span></h2>
+      <p>Have an idea in mind? Send a message and let's talk about it.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <p>Available for freelance web design, development and graphic design projects. Reach out through any of the channels below.</p>
+        <div class="contact-detail"><i class="fa-solid fa-envelope"></i><span>piyushshukla16@gmail.com</span></div>
+       <div class="contact-detail">
+    <i class="fa-solid fa-phone"></i>
+    <a href="tel:+918169172994">+91 81691 72994</a>
+</div>
+        <div class="contact-detail"><i class="fa-solid fa-location-dot"></i><span>Available for remote work, worldwide</span></div>
+        <div class="contact-detail"><i class="fa-solid fa-clock"></i><span>Usually responds within 24 hours</span></div>
+      </div>
+
+   <form class="contact-form reveal"
+      id="contactForm"
+      action="https://formspree.io/f/maenovdn"
+      method="POST"
+      target="hiddenFrame"
+      onsubmit="setTimeout(function(){
+      document.getElementById('formMessage').style.display='block';
+      document.getElementById('formMessage').textContent='✓ Thank you! Your message has been sent successfully. I will get back to you soon.';
+      document.getElementById('formMessage').className='form-message success';
+      document.getElementById('submitBtn').innerHTML='Message Sent ✓';
+
+      setTimeout(function(){
+      document.getElementById('formMessage').style.display='none';
+      document.getElementById('submitBtn').disabled=false;
+      document.getElementById('submitBtn').innerHTML='Send Message <i class=\'fa-solid fa-paper-plane\'></i>';
+      },5000);
+
+      },300); return true;"
+    >
+
+    <input
+        type="text"
+        name="name"
+        placeholder="Your name"
+        required
+    >
+
+    <input
+        type="email"
+        name="email"
+        placeholder="Your email"
+        required
+    >
+
+    <input
+        type="text"
+        name="subject"
+        placeholder="Subject"
+    >
+
+    <textarea
+        name="message"
+        placeholder="Tell me about your project"
+        required
+    ></textarea>
+
+    <button type="submit" class="btn primary-btn" id="submitBtn">
+    Send Message
+    <i class="fa-solid fa-paper-plane"></i>
+</button>
+
+    <p id="formMessage" class="form-message"></p>
+
+</form>
+
+<iframe
+    name="hiddenFrame"
+    id="hiddenFrame"
+    style="display:none;">
+</iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container footer-inner">
+    <p>&copy; <span id="year"></span> Piyush Shukla. All rights reserved.</p>
+    <div class="footer-social">
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= PROJECT MODAL ================= -->
+<div class="modal-backdrop" id="modalBackdrop">
+
+    <div class="modal project-modal">
+
+        <button class="modal-close" id="modalClose" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="project-modal-image">
+            <img
+                id="modalImage"
+               src="images/business-website.jpg"
+                alt="Project Preview"
+            >
+        </div>
+
+        <div class="project-modal-content">
+
+            <span class="modal-cat" id="modalCategory"></span>
+
+            <h3 id="modalTitle"></h3>
+
+            <p id="modalDescription"></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// Year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Mobile menu toggle
+const menuBtn = document.getElementById('menuBtn');
+const navMenu = document.getElementById('navMenu');
+menuBtn.addEventListener('click', () => {
+  const isOpen = navMenu.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', isOpen);
+  menuBtn.innerHTML = isOpen
+    ? '<i class="fa-solid fa-xmark"></i>'
+    : '<i class="fa-solid fa-bars"></i>';
+});
+navMenu.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', false);
+    menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+  });
+});
+
+// Active nav link on scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+const setActiveLink = () => {
+  let current = sections[0]?.id;
+  sections.forEach(sec => {
+    const top = sec.offsetTop - 100;
+    if (window.scrollY >= top) current = sec.id;
+  });
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+  });
+};
+window.addEventListener('scroll', setActiveLink);
+setActiveLink();
+
+// Reveal on scroll
+const revealEls = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+revealEls.forEach(el => revealObserver.observe(el));
+
+// Portfolio filter
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    projectCards.forEach(card => {
+      const match = filter === 'all' || card.dataset.category === filter;
+      card.classList.toggle('hidden', !match);
+    });
+  });
+});
+
+// Project modal
+const modalBackdrop = document.getElementById('modalBackdrop');
+const modalTitle = document.getElementById('modalTitle');
+const modalCategory = document.getElementById('modalCategory');
+const modalDescription = document.getElementById('modalDescription');
+const modalClose = document.getElementById('modalClose');
+
+document.querySelectorAll('.view-project').forEach(btn => {
+  btn.addEventListener('click', () => {
+    modalTitle.textContent = btn.dataset.title;
+    modalCategory.textContent = btn.dataset.category;
+    modalDescription.textContent = btn.dataset.description;
+    modalBackdrop.classList.add('open');
+  });
+});
+const closeModal = () => modalBackdrop.classList.remove('open');
+modalClose.addEventListener('click', closeModal);
+modalBackdrop.addEventListener('click', (e) => {
+  if (e.target === modalBackdrop) closeModal();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
+});
+
+// Toast helper
+const toast = document.getElementById('toast');
+let toastTimer;
+function showToast(message) {
+  toast.textContent = message;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
+}
+
+// Service buttons -> scroll to contact + toast
+document.querySelectorAll('.service-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+    showToast(btn.dataset.service + ' selected — tell me about your project below.');
+  });
+});
+</script>
+<!-- WhatsApp Button -->
+<a class="whatsapp-float"
+   href="https://wa.me/918169172994?text=Hi%20Piyush%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
+   target="_blank"
+   rel="noopener"
+   aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+</body>
+</html>
