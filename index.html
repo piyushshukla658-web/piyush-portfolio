@@ -253,7 +253,24 @@ h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15;l
   position:relative;width:100%;max-width:340px;background:var(--surface);
   border:1px solid var(--border);border-radius:var(--radius-md);padding:28px;text-align:center;
 }
-.profile-image{width:120px;height:120px;border-radius:50%;margin:0 auto 18px;overflow:hidden;border:2px solid var(--accent)}
+.profile-image{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin:0 auto 18px;
+    overflow:hidden;
+    border:none;
+    box-sizing:border-box;
+}
+
+.profile-image img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    object-position:center;
+    border-radius:50%;
+}
 .profile-image .avatar-fallback{
   width:100%;height:100%;display:flex;align-items:center;justify-content:center;
   background:linear-gradient(135deg,var(--accent),var(--accent-2));
@@ -566,10 +583,28 @@ footer{border-top:1px solid var(--border);padding:32px 0}
           <h3>Piyush Shukla</h3>
           <p>Freelancer &amp; Digital Creator</p>
           <div class="profile-social">
-            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-          </div>
+    <a href="https://www.instagram.com/piyushshukla7411?stkn=MTR0eXR4czk4OXUyNQ=="
+   target="_blank"
+   rel="noopener"
+   aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+</a>
+
+    <a href="#" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
+    <a href="#" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+    </a>
+
+    <a href="https://wa.me/918169172994?text=Hi%20Piyush%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
+       target="_blank"
+       rel="noopener"
+       aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</div>
         </div>
       </div>
     </div>
@@ -891,6 +926,8 @@ footer{border-top:1px solid var(--border);padding:32px 0}
               data-title="Business Website"
               data-category="Web Design"
               data-description="A modern responsive business website designed with a clean professional interface, clear sections and a strong visual presentation."
+              data-image="images/business-website.jpg"
+onclick="event.stopImmediatePropagation(); window.open(this.dataset.image, '_blank'); return false;"
             >
               View Project
               <i class="fa-solid fa-arrow-right"></i>
@@ -906,34 +943,42 @@ footer{border-top:1px solid var(--border);padding:32px 0}
       </div>
 
 
-      <!-- Restaurant Website -->
-      <div class="project-card reveal" data-category="web">
-        <div class="project-image">
-          <img
+<!-- Restaurant Website -->
+<div class="project-card reveal" data-category="web">
+
+    <div class="project-image">
+
+        <img
             src="images/restaurant-website.jpg"
             alt="Restaurant Website Project"
-          >
+        >
 
-          <div class="project-overlay">
-            <button
-              class="view-project"
-              data-title="Restaurant Website"
-              data-category="Web Development"
-              data-description="A visually attractive restaurant website focused on menu presentation, responsive design and customer enquiries."
-            >
-              View Project
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
+        <div class="project-overlay">
+
+           <button
+    type="button"
+    class="view-project"
+    data-title="Restaurant Website"
+    data-category="Web Development"
+    data-description="A visually attractive restaurant website focused on menu presentation, responsive design and customer enquiries."
+    data-image="images/restaurant-website.jpg"
+    onclick="event.stopImmediatePropagation(); window.open(this.dataset.image, '_blank'); return false;"
+>
+    View Project
+    <i class="fa-solid fa-arrow-right"></i>
+</button>
+
         </div>
 
-        <div class="project-info">
-          <span>WEB DEVELOPMENT</span>
-          <h3>Restaurant Website</h3>
-          <p>Responsive restaurant website concept with modern presentation.</p>
-        </div>
-      </div>
+    </div>
 
+    <div class="project-info">
+        <span>WEB DEVELOPMENT</span>
+        <h3>Restaurant Website</h3>
+        <p>Responsive restaurant website concept with modern presentation.</p>
+    </div>
+
+</div>
 
       <!-- Business Poster -->
       <div class="project-card reveal" data-category="design">
@@ -949,6 +994,8 @@ footer{border-top:1px solid var(--border);padding:32px 0}
               data-title="Business Poster"
               data-category="Graphic Design"
               data-description="Professional promotional poster created for a business campaign with a clean layout and strong visual hierarchy."
+              data-image="images/business-poster.jpg"
+onclick="event.stopImmediatePropagation(); window.open(this.dataset.image, '_blank'); return false;"
             >
               View Project
               <i class="fa-solid fa-arrow-right"></i>
@@ -978,6 +1025,8 @@ footer{border-top:1px solid var(--border);padding:32px 0}
               data-title="Social Media Campaign"
               data-category="Social Media"
               data-description="A social media creative campaign designed for Instagram marketing, promotions and brand communication."
+              data-image="images/social-media.jpg"
+onclick="event.stopImmediatePropagation(); window.open(this.dataset.image, '_blank'); return false;"
             >
               View Project
               <i class="fa-solid fa-arrow-right"></i>
@@ -1007,6 +1056,8 @@ footer{border-top:1px solid var(--border);padding:32px 0}
               data-title="YouTube Thumbnail"
               data-category="Thumbnail Design"
               data-description="High-impact YouTube thumbnail concept designed to create strong visual attention and improve content presentation."
+              data-image="images/youtube-thumbnail.jpg"
+onclick="event.stopImmediatePropagation(); window.open(this.dataset.image, '_blank'); return false;"
             >
               View Project
               <i class="fa-solid fa-arrow-right"></i>
@@ -1036,6 +1087,8 @@ footer{border-top:1px solid var(--border);padding:32px 0}
               data-title="Real Estate Design"
               data-category="Graphic Design"
               data-description="Branded real estate marketing creative designed for property listings, promotions and digital advertising."
+              data-image="images/real-estate-design.jpg"
+onclick="event.stopImmediatePropagation(); window.open(this.dataset.image, '_blank'); return false;"
             >
               View Project
               <i class="fa-solid fa-arrow-right"></i>
@@ -1414,10 +1467,25 @@ footer{border-top:1px solid var(--border);padding:32px 0}
   <div class="container footer-inner">
     <p>&copy; <span id="year"></span> Piyush Shukla. All rights reserved.</p>
     <div class="footer-social">
-      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-    </div>
+    <a href="#" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="#" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
+    <a href="#" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+    </a>
+
+    <a href="https://wa.me/918169172994?text=Hi%20Piyush%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
+       target="_blank"
+       rel="noopener"
+       aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</div>
   </div>
 </footer>
 
@@ -1430,13 +1498,10 @@ footer{border-top:1px solid var(--border);padding:32px 0}
             <i class="fa-solid fa-xmark"></i>
         </button>
 
-        <div class="project-modal-image">
-            <img
-                id="modalImage"
-               src="images/business-website.jpg"
-                alt="Project Preview"
-            >
-        </div>
+        <div
+    class="project-modal-image"
+    id="projectModalImage"
+></div>
 
         <div class="project-modal-content">
 
@@ -1451,7 +1516,6 @@ footer{border-top:1px solid var(--border);padding:32px 0}
     </div>
 
 </div>
-
 <div class="toast" id="toast"></div>
 
 <script>
@@ -1562,12 +1626,5 @@ document.querySelectorAll('.service-btn').forEach(btn => {
 });
 </script>
 <!-- WhatsApp Button -->
-<a class="whatsapp-float"
-   href="https://wa.me/918169172994?text=Hi%20Piyush%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
-   target="_blank"
-   rel="noopener"
-   aria-label="Chat on WhatsApp">
-  <i class="fa-brands fa-whatsapp"></i>
-</a>
 </body>
 </html>

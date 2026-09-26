@@ -188,56 +188,37 @@ filterButtons.forEach(button => {
 });
 
 
-const modal =
-    document.getElementById("modalBackdrop");
+const modalTitle = document.getElementById("modalTitle");
+const modalCategory = document.getElementById("modalCategory");
+const modalDescription = document.getElementById("modalDescription");
 
-const modalClose =
-    document.getElementById("modalClose");
-
-const modalImage =
-    document.getElementById("modalImage");
-
-const modalTitle =
-    document.getElementById("modalTitle");
-
-const modalCategory =
-    document.getElementById("modalCategory");
-
-const modalDescription =
-    document.getElementById("modalDescription");
-
-
-const viewProjectButtons =
-    document.querySelectorAll(".view-project");
-
+const viewProjectButtons = document.querySelectorAll(".view-project");
 
 viewProjectButtons.forEach(button => {
-
     button.addEventListener("click", () => {
 
-        const card =
-            button.closest(".project-card");
+        const imagePath = button.getAttribute("data-image");
 
-        const image =
-            card.querySelector("img");
+        if (!imagePath) {
+            console.error("Project image path not found");
+            return;
+        }
 
-        modalImage.src = image.src;
-
-        modalTitle.textContent =
-            button.dataset.title;
-
-        modalCategory.textContent =
-            button.dataset.category;
-
-        modalDescription.textContent =
-            button.dataset.description;
-
-        modal.classList.add("open");
-
-        document.body.style.overflow = "hidden";
-
+        window.open(imagePath, "_blank");
     });
+});
 
+function closeProjectModal() {
+    modal.classList.remove("open");
+    document.body.style.overflow = "";
+}
+
+modalClose.addEventListener("click", closeProjectModal);
+
+modal.addEventListener("click", event => {
+    if (event.target === modal) {
+        closeProjectModal();
+    }
 });
 
 
