@@ -1615,3 +1615,164 @@ section{
     display: block !important;
     border-radius: 50% !important;
 }
+
+/* FAQ SECTION */
+
+.faq-section {
+    padding: 100px 0;
+}
+
+.faq-container {
+    max-width: 850px;
+    margin: 45px auto 0;
+}
+
+.faq-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    margin-bottom: 14px;
+    overflow: hidden;
+}
+
+.faq-item summary {
+    list-style: none !important;
+    display: flex !important;
+    cursor: pointer;
+    padding: 22px 24px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.faq-item summary::marker {
+    content: none !important;
+    display: none !important;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none !important;
+    -webkit-appearance: none;
+}
+
+.faq-item summary i {
+    color: var(--accent);
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary i {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding: 0 24px 22px;
+}
+
+.faq-answer p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin: 0;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+
+    .faq-section {
+        padding: 75px 0;
+    }
+
+    .faq-item summary {
+        padding: 18px;
+        font-size: 15px;
+    }
+
+    .faq-answer {
+        padding: 0 18px 18px;
+    }
+
+}
+
+/* CTA SECTION */
+
+.cta-section {
+    padding: 90px 0;
+}
+
+.cta-box {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 70px 40px;
+    text-align: center;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.cta-box h2 {
+    margin: 12px 0 16px;
+    font-size: clamp(32px, 5vw, 52px);
+    color: var(--text);
+}
+
+.cta-box p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+
+.secondary-btn {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.secondary-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+@media (max-width: 600px) {
+    .cta-section {
+        padding: 70px 0;
+    }
+
+    .cta-box {
+        padding: 50px 22px;
+    }
+
+    .cta-box h2 {
+        font-size: 34px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+    }
+}
